@@ -1,0 +1,9 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bfo: <http://www.ifomis.org/bfo/1.1#Entity>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+SELECT ?symptomName WHERE{
+ GRAPH <http://bioportal.bioontology.org/ontologies/FLU>{
+  ?s ?p <http://purl.obolibrary.org/obo/OGMS_0000020>.
+  ?s <http://www.w3.org/2000/01/rdf-schema#label> ?symptomName.
+ }
+}
