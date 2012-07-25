@@ -21,6 +21,8 @@ import twitter4j.StatusListener;
 import twitter4j.TwitterException;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
+import twitter4j.conf.Configuration;
+import twitter4j.conf.ConfigurationBuilder;
 //import twitter4j.http.AccessToken;
 //import twitter4j.http.RequestToken;
 
@@ -29,9 +31,9 @@ import com.hp.hpl.jena.ontology.Individual;
 public class TweetQueue implements StatusListener {
 
     private ConceptMap concepts = null;
+       
     private TwitterStream twitter = new TwitterStreamFactory().getInstance();
 
-    
     private BlockingQueue<Tweet> tweets = new LinkedBlockingQueue<Tweet>();
     
     public TweetQueue(String fileOrURI) throws CorruptIndexException, LockObtainFailedException, IOException, TwitterException, BackingStoreException {
@@ -46,54 +48,9 @@ public class TweetQueue implements StatusListener {
     }
 
     public void start() throws IOException, TwitterException {
+    	System.out.println("Start() method was calling");
         twitter.sample();
     }
-    
-
-//    private AccessToken getAccessToken() throws TwitterException, IOException, BackingStoreException {
-//        Preferences prefs = Preferences.userNodeForPackage(getClass());
-//        String token = prefs.get("twitter.access.token", null);
-//        String tokenSecret = prefs.get("twitter.access.token.secret", null);
-//        AccessToken result = null;
-//        if (token == null) {
-//            result = authenticate();
-//            token = result.getToken();
-//            tokenSecret = result.getTokenSecret();
-//            prefs.put("twitter.access.token", token);
-//            prefs.put("twitter.access.token.secret", tokenSecret);
-//            prefs.flush();
-//        } else {
-//            result = new AccessToken(token, tokenSecret);
-//        }
-//        return result;
-//    }
-    
-//    private AccessToken authenticate() throws TwitterException, IOException {
-//        TwitterStream t = factory.getOAuthAuthorizedInstance(consumerKey, consumerSecret);
-//        RequestToken requestToken = t.getOAuthRequestToken();
-//        AccessToken accessToken = null;
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        while (null == accessToken) {
-//          System.out.println("Open the following URL and grant access to your account:");
-//          System.out.println(requestToken.getAuthorizationURL());
-//          System.out.print("Enter the PIN(if aviailable) or just hit enter.[PIN]:");
-//          String pin = br.readLine();
-//          try{
-//             if(pin.length() > 0){
-//               accessToken = t.getOAuthAccessToken(requestToken, pin);
-//             }else{
-//               accessToken = t.getOAuthAccessToken();
-//             }
-//          } catch (TwitterException te) {
-//            if(401 == te.getStatusCode()){
-//              System.out.println("Unable to get the access token.");
-//            }else{
-//              te.printStackTrace();
-//            }
-//          }
-//        }
-//        return accessToken;
-//    }
     
     
     public void setConcepts(ConceptMap concepts) {
@@ -115,8 +72,12 @@ public class TweetQueue implements StatusListener {
 
     @Override
     public void onStatus(Status status) {
-    	List<Individual> individuals = concepts.getConcepts(status.getText());
+    	List<Individual> individuals = concepts.getConcepts(status);
     	if (individuals.size() > 1) {
+    		
+    		//for debugging
+    		System.out.println("Oh Yeah! I am called");
+    		
     		Tweet tweet = new Tweet();
     		tweet.termVector = individuals;
     		tweet.text = status.getText();
@@ -124,7 +85,9 @@ public class TweetQueue implements StatusListener {
     		tweet.creator = status.getUser();
     		tweet.added = new Date();
     		tweets.add(tweet);
-    		//System.out.println(status.getText()+"\t"+individuals);
+    		
+    		//for debugging
+//    		System.out.println(status.getText()+"\t"+individuals);
     	}
     }	
     
@@ -163,12 +126,12 @@ public class TweetQueue implements StatusListener {
 		String httpQueryString = String.format("query=%s&apikey=%s", 
 			     URLEncoder.encode(queryText, "UTF-8"), 
 			     apikey);
-//			     URLEncoder.encode(apikey, "UTF-8"));
 		
 		String url = sparqlService + "?" + httpQueryString;
 		System.out.println(url);
-    	TweetQueue queue = new TweetQueue(url);//args[0]   endpoint+"?query="+URLEncoder.encode(sparqlConstructQuery)
+    	TweetQueue queue = new TweetQueue(url);//args[0]
         queue.start();
         System.out.println("Back?");
     }
+
 }

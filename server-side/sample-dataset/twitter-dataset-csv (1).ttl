@@ -1,0 +1,2010 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ogc: <http://www.opengis.net/rdf#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+<http://purl.org/twc/skitter/tweet/0> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-06-168 06:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/0/location> a geo:Point ;
+	geo:lat "-106.35695363"^^xsd:double ;
+	geo:long "-47.3897595"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/0> prov:location <http://purl.org/twc/skitter/tweet/0/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/1> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2013-04-94 18:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/1/location> a geo:Point ;
+	geo:lat "-145.2532877"^^xsd:double ;
+	geo:long "-33.09789545"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/1> prov:location <http://purl.org/twc/skitter/tweet/1/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/2> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-01-28 16:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/2/location> a geo:Point ;
+	geo:lat "61.36788935"^^xsd:double ;
+	geo:long "172.96761724"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/2> prov:location <http://purl.org/twc/skitter/tweet/2/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/3> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2011-11-318 17:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/3/location> a geo:Point ;
+	geo:lat "-19.44548062"^^xsd:double ;
+	geo:long "44.46971879"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/3> prov:location <http://purl.org/twc/skitter/tweet/3/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/4> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2011-08-223 05:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/4/location> a geo:Point ;
+	geo:lat "-71.46899283"^^xsd:double ;
+	geo:long "-41.10628454"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/4> prov:location <http://purl.org/twc/skitter/tweet/4/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/5> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-04-105 04:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/5/location> a geo:Point ;
+	geo:lat "41.98835963"^^xsd:double ;
+	geo:long "23.91942646"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/5> prov:location <http://purl.org/twc/skitter/tweet/5/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/6> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-12-355 15:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/6/location> a geo:Point ;
+	geo:lat "28.17146499"^^xsd:double ;
+	geo:long "105.12559925"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/6> prov:location <http://purl.org/twc/skitter/tweet/6/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/7> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-10-292 22:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/7/location> a geo:Point ;
+	geo:lat "-152.27861571"^^xsd:double ;
+	geo:long "-15.1408348"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/7> prov:location <http://purl.org/twc/skitter/tweet/7/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/8> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2011-07-192 14:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/8/location> a geo:Point ;
+	geo:lat "-70.65552762"^^xsd:double ;
+	geo:long "153.83817987"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/8> prov:location <http://purl.org/twc/skitter/tweet/8/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/9> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-05-145 14:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/9/location> a geo:Point ;
+	geo:lat "-29.88494867"^^xsd:double ;
+	geo:long "77.82449723"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/9> prov:location <http://purl.org/twc/skitter/tweet/9/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/10> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2013-03-67 11:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/10/location> a geo:Point ;
+	geo:lat "-65.83383258"^^xsd:double ;
+	geo:long "-172.16808951"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/10> prov:location <http://purl.org/twc/skitter/tweet/10/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/11> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-11-320 12:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/11/location> a geo:Point ;
+	geo:lat "-131.37104307"^^xsd:double ;
+	geo:long "-97.56422417"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/11> prov:location <http://purl.org/twc/skitter/tweet/11/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/12> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-08-235 01:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/12/location> a geo:Point ;
+	geo:lat "-13.29860794"^^xsd:double ;
+	geo:long "107.66717726"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/12> prov:location <http://purl.org/twc/skitter/tweet/12/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/13> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-11-310 11:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/13/location> a geo:Point ;
+	geo:lat "115.73353243"^^xsd:double ;
+	geo:long "78.97588476"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/13> prov:location <http://purl.org/twc/skitter/tweet/13/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/14> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2013-06-173 23:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/14/location> a geo:Point ;
+	geo:lat "88.86394984"^^xsd:double ;
+	geo:long "-24.33830534"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/14> prov:location <http://purl.org/twc/skitter/tweet/14/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/15> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2013-06-160 03:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/15/location> a geo:Point ;
+	geo:lat "-164.1559298"^^xsd:double ;
+	geo:long "154.63030471"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/15> prov:location <http://purl.org/twc/skitter/tweet/15/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/16> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-10-291 15:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/16/location> a geo:Point ;
+	geo:lat "25.45276235"^^xsd:double ;
+	geo:long "16.81127939"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/16> prov:location <http://purl.org/twc/skitter/tweet/16/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/17> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2013-06-179 01:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/17/location> a geo:Point ;
+	geo:lat "-114.37214537"^^xsd:double ;
+	geo:long "-125.67543281"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/17> prov:location <http://purl.org/twc/skitter/tweet/17/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/18> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2011-10-278 17:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/18/location> a geo:Point ;
+	geo:lat "151.12255066"^^xsd:double ;
+	geo:long "84.69816358"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/18> prov:location <http://purl.org/twc/skitter/tweet/18/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/19> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-05-132 03:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/19/location> a geo:Point ;
+	geo:lat "-164.15174931"^^xsd:double ;
+	geo:long "151.09674669"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/19> prov:location <http://purl.org/twc/skitter/tweet/19/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/20> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-08-224 04:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/20/location> a geo:Point ;
+	geo:lat "138.01178573"^^xsd:double ;
+	geo:long "9.41211377"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/20> prov:location <http://purl.org/twc/skitter/tweet/20/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/21> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2011-10-276 21:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/21/location> a geo:Point ;
+	geo:lat "71.109755"^^xsd:double ;
+	geo:long "-175.77019255"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/21> prov:location <http://purl.org/twc/skitter/tweet/21/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/22> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-08-222 16:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/22/location> a geo:Point ;
+	geo:lat "-118.08688269"^^xsd:double ;
+	geo:long "66.75925481"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/22> prov:location <http://purl.org/twc/skitter/tweet/22/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/23> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2013-06-163 04:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/23/location> a geo:Point ;
+	geo:lat "-123.62781726"^^xsd:double ;
+	geo:long "121.05819654"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/23> prov:location <http://purl.org/twc/skitter/tweet/23/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/24> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-01-04 04:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/24/location> a geo:Point ;
+	geo:lat "-135.05971664"^^xsd:double ;
+	geo:long "-145.66548922"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/24> prov:location <http://purl.org/twc/skitter/tweet/24/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/25> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-05-146 05:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/25/location> a geo:Point ;
+	geo:lat "-9.44891186"^^xsd:double ;
+	geo:long "-125.08770085"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/25> prov:location <http://purl.org/twc/skitter/tweet/25/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/26> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2012-01-10 10:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/26/location> a geo:Point ;
+	geo:lat "63.63029414"^^xsd:double ;
+	geo:long "-45.56245323"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/26> prov:location <http://purl.org/twc/skitter/tweet/26/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/27> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2011-11-316 19:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/27/location> a geo:Point ;
+	geo:lat "-41.55648276"^^xsd:double ;
+	geo:long "169.02034323"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/27> prov:location <http://purl.org/twc/skitter/tweet/27/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/28> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-04-105 05:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/28/location> a geo:Point ;
+	geo:lat "-147.14559786"^^xsd:double ;
+	geo:long "105.90740538"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/28> prov:location <http://purl.org/twc/skitter/tweet/28/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/29> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-04-111 00:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/29/location> a geo:Point ;
+	geo:lat "-168.54520789"^^xsd:double ;
+	geo:long "64.42732582"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/29> prov:location <http://purl.org/twc/skitter/tweet/29/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/30> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2011-11-322 03:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/30/location> a geo:Point ;
+	geo:lat "-173.87873609"^^xsd:double ;
+	geo:long "117.16706168"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/30> prov:location <http://purl.org/twc/skitter/tweet/30/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/31> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-05-149 13:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/31/location> a geo:Point ;
+	geo:lat "-153.66586498"^^xsd:double ;
+	geo:long "-108.92620552"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/31> prov:location <http://purl.org/twc/skitter/tweet/31/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/32> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2011-08-240 10:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/32/location> a geo:Point ;
+	geo:lat "-38.68567137"^^xsd:double ;
+	geo:long "-83.7990865"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/32> prov:location <http://purl.org/twc/skitter/tweet/32/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/33> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-07-187 14:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/33/location> a geo:Point ;
+	geo:lat "20.63953123"^^xsd:double ;
+	geo:long "128.24441338"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/33> prov:location <http://purl.org/twc/skitter/tweet/33/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/34> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2013-05-143 09:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/34/location> a geo:Point ;
+	geo:lat "171.75781132"^^xsd:double ;
+	geo:long "-165.69969388"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/34> prov:location <http://purl.org/twc/skitter/tweet/34/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/35> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-01-18 10:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/35/location> a geo:Point ;
+	geo:lat "-164.31607638"^^xsd:double ;
+	geo:long "-160.72531738"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/35> prov:location <http://purl.org/twc/skitter/tweet/35/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/36> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2011-08-231 21:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/36/location> a geo:Point ;
+	geo:lat "126.16874439"^^xsd:double ;
+	geo:long "-67.32087642"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/36> prov:location <http://purl.org/twc/skitter/tweet/36/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/37> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-12-363 16:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/37/location> a geo:Point ;
+	geo:lat "-97.55128074"^^xsd:double ;
+	geo:long "-123.56631585"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/37> prov:location <http://purl.org/twc/skitter/tweet/37/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/38> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-06-180 17:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/38/location> a geo:Point ;
+	geo:lat "95.45593117"^^xsd:double ;
+	geo:long "-170.95118667"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/38> prov:location <http://purl.org/twc/skitter/tweet/38/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/39> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2011-10-284 19:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/39/location> a geo:Point ;
+	geo:lat "98.03848159"^^xsd:double ;
+	geo:long "3.19763543"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/39> prov:location <http://purl.org/twc/skitter/tweet/39/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/40> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2011-07-199 02:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/40/location> a geo:Point ;
+	geo:lat "156.20603517"^^xsd:double ;
+	geo:long "78.89396981"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/40> prov:location <http://purl.org/twc/skitter/tweet/40/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/41> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-07-196 19:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/41/location> a geo:Point ;
+	geo:lat "39.54023294"^^xsd:double ;
+	geo:long "94.90230955"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/41> prov:location <http://purl.org/twc/skitter/tweet/41/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/42> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-07-200 12:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/42/location> a geo:Point ;
+	geo:lat "81.77520517"^^xsd:double ;
+	geo:long "71.88239625"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/42> prov:location <http://purl.org/twc/skitter/tweet/42/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/43> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-10-294 06:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/43/location> a geo:Point ;
+	geo:lat "-175.22663558"^^xsd:double ;
+	geo:long "11.05305641"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/43> prov:location <http://purl.org/twc/skitter/tweet/43/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/44> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-10-305 20:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/44/location> a geo:Point ;
+	geo:lat "-20.76279408"^^xsd:double ;
+	geo:long "-2.61569343"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/44> prov:location <http://purl.org/twc/skitter/tweet/44/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/45> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-08-230 12:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/45/location> a geo:Point ;
+	geo:lat "57.84651289"^^xsd:double ;
+	geo:long "138.4562961"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/45> prov:location <http://purl.org/twc/skitter/tweet/45/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/46> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-06-170 12:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/46/location> a geo:Point ;
+	geo:lat "3.41366289"^^xsd:double ;
+	geo:long "141.1691349"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/46> prov:location <http://purl.org/twc/skitter/tweet/46/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/47> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-08-225 08:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/47/location> a geo:Point ;
+	geo:lat "124.55968748"^^xsd:double ;
+	geo:long "-126.10704895"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/47> prov:location <http://purl.org/twc/skitter/tweet/47/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/48> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-03-61 09:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/48/location> a geo:Point ;
+	geo:lat "89.75820168"^^xsd:double ;
+	geo:long "-125.50633338"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/48> prov:location <http://purl.org/twc/skitter/tweet/48/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/49> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2013-04-105 19:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/49/location> a geo:Point ;
+	geo:lat "-78.87637858"^^xsd:double ;
+	geo:long "-66.38515893"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/49> prov:location <http://purl.org/twc/skitter/tweet/49/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/50> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2013-06-180 02:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/50/location> a geo:Point ;
+	geo:lat "-66.00017715"^^xsd:double ;
+	geo:long "-15.96446773"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/50> prov:location <http://purl.org/twc/skitter/tweet/50/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/51> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-03-73 16:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/51/location> a geo:Point ;
+	geo:lat "-123.68416735"^^xsd:double ;
+	geo:long "135.24543223"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/51> prov:location <http://purl.org/twc/skitter/tweet/51/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/52> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-02-41 21:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/52/location> a geo:Point ;
+	geo:lat "-86.60983235"^^xsd:double ;
+	geo:long "144.00785654"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/52> prov:location <http://purl.org/twc/skitter/tweet/52/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/53> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2013-02-40 18:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/53/location> a geo:Point ;
+	geo:lat "149.29831729"^^xsd:double ;
+	geo:long "-46.80559227"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/53> prov:location <http://purl.org/twc/skitter/tweet/53/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/54> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-11-320 09:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/54/location> a geo:Point ;
+	geo:lat "-140.50883382"^^xsd:double ;
+	geo:long "173.83551159"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/54> prov:location <http://purl.org/twc/skitter/tweet/54/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/55> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-07-187 06:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/55/location> a geo:Point ;
+	geo:lat "144.19780128"^^xsd:double ;
+	geo:long "-121.24290392"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/55> prov:location <http://purl.org/twc/skitter/tweet/55/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/56> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-09-266 15:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/56/location> a geo:Point ;
+	geo:lat "-101.3172418"^^xsd:double ;
+	geo:long "-90.45983857"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/56> prov:location <http://purl.org/twc/skitter/tweet/56/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/57> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-10-305 13:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/57/location> a geo:Point ;
+	geo:lat "-35.92226705"^^xsd:double ;
+	geo:long "-78.61581413"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/57> prov:location <http://purl.org/twc/skitter/tweet/57/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/58> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-09-265 12:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/58/location> a geo:Point ;
+	geo:lat "113.14855375"^^xsd:double ;
+	geo:long "-23.208719"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/58> prov:location <http://purl.org/twc/skitter/tweet/58/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/59> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-07-193 14:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/59/location> a geo:Point ;
+	geo:lat "-158.97101637"^^xsd:double ;
+	geo:long "-118.31227926"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/59> prov:location <http://purl.org/twc/skitter/tweet/59/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/60> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2013-02-40 08:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/60/location> a geo:Point ;
+	geo:lat "125.23873554"^^xsd:double ;
+	geo:long "96.94945179"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/60> prov:location <http://purl.org/twc/skitter/tweet/60/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/61> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-12-346 22:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/61/location> a geo:Point ;
+	geo:lat "-143.81279076"^^xsd:double ;
+	geo:long "67.35978874"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/61> prov:location <http://purl.org/twc/skitter/tweet/61/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/62> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2013-04-118 18:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/62/location> a geo:Point ;
+	geo:lat "-89.75941254"^^xsd:double ;
+	geo:long "-163.20118015"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/62> prov:location <http://purl.org/twc/skitter/tweet/62/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/63> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2013-04-112 23:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/63/location> a geo:Point ;
+	geo:lat "62.53499795"^^xsd:double ;
+	geo:long "-136.84535308"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/63> prov:location <http://purl.org/twc/skitter/tweet/63/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/64> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-10-276 18:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/64/location> a geo:Point ;
+	geo:lat "77.17425456"^^xsd:double ;
+	geo:long "146.66187195"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/64> prov:location <http://purl.org/twc/skitter/tweet/64/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/65> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2011-10-290 15:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/65/location> a geo:Point ;
+	geo:lat "69.19734963"^^xsd:double ;
+	geo:long "164.13250145"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/65> prov:location <http://purl.org/twc/skitter/tweet/65/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/66> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2011-08-220 16:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/66/location> a geo:Point ;
+	geo:lat "-69.63685686"^^xsd:double ;
+	geo:long "-75.88806567"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/66> prov:location <http://purl.org/twc/skitter/tweet/66/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/67> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2011-12-340 10:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/67/location> a geo:Point ;
+	geo:lat "-125.60491819"^^xsd:double ;
+	geo:long "166.47732684"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/67> prov:location <http://purl.org/twc/skitter/tweet/67/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/68> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-10-278 17:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/68/location> a geo:Point ;
+	geo:lat "-44.84905701"^^xsd:double ;
+	geo:long "1.75441446"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/68> prov:location <http://purl.org/twc/skitter/tweet/68/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/69> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-08-244 13:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/69/location> a geo:Point ;
+	geo:lat "61.22415593"^^xsd:double ;
+	geo:long "-46.92754438"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/69> prov:location <http://purl.org/twc/skitter/tweet/69/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/70> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-09-245 00:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/70/location> a geo:Point ;
+	geo:lat "164.93120505"^^xsd:double ;
+	geo:long "-109.44101339"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/70> prov:location <http://purl.org/twc/skitter/tweet/70/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/71> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2012-08-216 21:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/71/location> a geo:Point ;
+	geo:lat "157.51351214"^^xsd:double ;
+	geo:long "-130.68236608"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/71> prov:location <http://purl.org/twc/skitter/tweet/71/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/72> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2011-08-242 22:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/72/location> a geo:Point ;
+	geo:lat "144.88312159"^^xsd:double ;
+	geo:long "94.70418223"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/72> prov:location <http://purl.org/twc/skitter/tweet/72/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/73> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2011-11-326 11:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/73/location> a geo:Point ;
+	geo:lat "16.39674293"^^xsd:double ;
+	geo:long "-67.52828744"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/73> prov:location <http://purl.org/twc/skitter/tweet/73/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/74> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-01-01 13:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/74/location> a geo:Point ;
+	geo:lat "-158.87079197"^^xsd:double ;
+	geo:long "-55.38175438"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/74> prov:location <http://purl.org/twc/skitter/tweet/74/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/75> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2011-10-296 17:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/75/location> a geo:Point ;
+	geo:lat "124.34213413"^^xsd:double ;
+	geo:long "-106.49210732"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/75> prov:location <http://purl.org/twc/skitter/tweet/75/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/76> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-07-199 09:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/76/location> a geo:Point ;
+	geo:lat "54.29755115"^^xsd:double ;
+	geo:long "133.34308915"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/76> prov:location <http://purl.org/twc/skitter/tweet/76/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/77> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2013-01-30 17:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/77/location> a geo:Point ;
+	geo:lat "133.83068184"^^xsd:double ;
+	geo:long "-102.9818888"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/77> prov:location <http://purl.org/twc/skitter/tweet/77/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/78> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-04-104 22:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/78/location> a geo:Point ;
+	geo:lat "-135.1015048"^^xsd:double ;
+	geo:long "32.25570096"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/78> prov:location <http://purl.org/twc/skitter/tweet/78/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/79> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2013-04-115 01:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/79/location> a geo:Point ;
+	geo:lat "103.85037726"^^xsd:double ;
+	geo:long "-124.9602686"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/79> prov:location <http://purl.org/twc/skitter/tweet/79/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/80> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2013-03-82 02:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/80/location> a geo:Point ;
+	geo:lat "-156.24304187"^^xsd:double ;
+	geo:long "167.35584286"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/80> prov:location <http://purl.org/twc/skitter/tweet/80/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/81> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-05-134 05:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/81/location> a geo:Point ;
+	geo:lat "99.19050486"^^xsd:double ;
+	geo:long "166.22640179"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/81> prov:location <http://purl.org/twc/skitter/tweet/81/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/82> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2011-09-254 03:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/82/location> a geo:Point ;
+	geo:lat "-62.3924144"^^xsd:double ;
+	geo:long "114.49950562"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/82> prov:location <http://purl.org/twc/skitter/tweet/82/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/83> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2011-08-224 06:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/83/location> a geo:Point ;
+	geo:lat "66.2806313"^^xsd:double ;
+	geo:long "-60.40909961"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/83> prov:location <http://purl.org/twc/skitter/tweet/83/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/84> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2013-01-05 01:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/84/location> a geo:Point ;
+	geo:lat "179.07270391"^^xsd:double ;
+	geo:long "3.91263532"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/84> prov:location <http://purl.org/twc/skitter/tweet/84/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/85> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-01-04 02:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/85/location> a geo:Point ;
+	geo:lat "-143.9968352"^^xsd:double ;
+	geo:long "126.5389731"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/85> prov:location <http://purl.org/twc/skitter/tweet/85/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/86> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2013-01-15 20:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/86/location> a geo:Point ;
+	geo:lat "-119.56855324"^^xsd:double ;
+	geo:long "54.84072121"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/86> prov:location <http://purl.org/twc/skitter/tweet/86/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/87> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-05-124 18:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/87/location> a geo:Point ;
+	geo:lat "-16.74381161"^^xsd:double ;
+	geo:long "3.38104791"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/87> prov:location <http://purl.org/twc/skitter/tweet/87/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/88> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-01-04 08:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/88/location> a geo:Point ;
+	geo:lat "81.12919364"^^xsd:double ;
+	geo:long "-8.80922469"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/88> prov:location <http://purl.org/twc/skitter/tweet/88/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/89> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-12-362 06:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/89/location> a geo:Point ;
+	geo:lat "142.66919096"^^xsd:double ;
+	geo:long "154.76054527"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/89> prov:location <http://purl.org/twc/skitter/tweet/89/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/90> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2012-02-37 11:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/90/location> a geo:Point ;
+	geo:lat "83.29562222"^^xsd:double ;
+	geo:long "169.81836247"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/90> prov:location <http://purl.org/twc/skitter/tweet/90/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/91> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-11-318 07:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/91/location> a geo:Point ;
+	geo:lat "69.60520703"^^xsd:double ;
+	geo:long "165.55831734"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/91> prov:location <http://purl.org/twc/skitter/tweet/91/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/92> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2013-06-156 21:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/92/location> a geo:Point ;
+	geo:lat "-11.37750716"^^xsd:double ;
+	geo:long "21.51297955"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/92> prov:location <http://purl.org/twc/skitter/tweet/92/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/93> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-02-60 18:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/93/location> a geo:Point ;
+	geo:lat "13.09329454"^^xsd:double ;
+	geo:long "50.50191026"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/93> prov:location <http://purl.org/twc/skitter/tweet/93/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/94> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-08-239 15:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/94/location> a geo:Point ;
+	geo:lat "-21.37901517"^^xsd:double ;
+	geo:long "107.13950122"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/94> prov:location <http://purl.org/twc/skitter/tweet/94/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/95> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-03-70 02:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/95/location> a geo:Point ;
+	geo:lat "120.13757331"^^xsd:double ;
+	geo:long "-132.81740177"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/95> prov:location <http://purl.org/twc/skitter/tweet/95/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/96> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-08-216 15:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/96/location> a geo:Point ;
+	geo:lat "-124.67430404"^^xsd:double ;
+	geo:long "59.64057867"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/96> prov:location <http://purl.org/twc/skitter/tweet/96/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/97> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-07-192 21:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/97/location> a geo:Point ;
+	geo:lat "77.7643951"^^xsd:double ;
+	geo:long "71.06785869"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/97> prov:location <http://purl.org/twc/skitter/tweet/97/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/98> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-01-30 20:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/98/location> a geo:Point ;
+	geo:lat "-97.78674417"^^xsd:double ;
+	geo:long "-127.25561768"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/98> prov:location <http://purl.org/twc/skitter/tweet/98/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/99> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2013-04-118 09:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/99/location> a geo:Point ;
+	geo:lat "-32.01707714"^^xsd:double ;
+	geo:long "-109.27636808"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/99> prov:location <http://purl.org/twc/skitter/tweet/99/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/100> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-12-342 12:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/100/location> a geo:Point ;
+	geo:lat "102.35037027"^^xsd:double ;
+	geo:long "20.87216775"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/100> prov:location <http://purl.org/twc/skitter/tweet/100/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/101> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-02-46 10:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/101/location> a geo:Point ;
+	geo:lat "-151.84113416"^^xsd:double ;
+	geo:long "130.47306245"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/101> prov:location <http://purl.org/twc/skitter/tweet/101/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/102> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-02-50 08:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/102/location> a geo:Point ;
+	geo:lat "138.27364684"^^xsd:double ;
+	geo:long "-44.83555357"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/102> prov:location <http://purl.org/twc/skitter/tweet/102/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/103> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-10-292 11:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/103/location> a geo:Point ;
+	geo:lat "-89.33111432"^^xsd:double ;
+	geo:long "-168.4878813"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/103> prov:location <http://purl.org/twc/skitter/tweet/103/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/104> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-01-28 02:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/104/location> a geo:Point ;
+	geo:lat "1.5627433"^^xsd:double ;
+	geo:long "86.70468586"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/104> prov:location <http://purl.org/twc/skitter/tweet/104/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/105> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-04-95 10:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/105/location> a geo:Point ;
+	geo:lat "158.26913068"^^xsd:double ;
+	geo:long "-34.20413369"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/105> prov:location <http://purl.org/twc/skitter/tweet/105/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/106> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2013-04-102 11:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/106/location> a geo:Point ;
+	geo:lat "138.65772533"^^xsd:double ;
+	geo:long "-89.57133655"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/106> prov:location <http://purl.org/twc/skitter/tweet/106/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/107> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-07-182 16:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/107/location> a geo:Point ;
+	geo:lat "19.81211526"^^xsd:double ;
+	geo:long "-156.93655956"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/107> prov:location <http://purl.org/twc/skitter/tweet/107/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/108> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-01-21 04:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/108/location> a geo:Point ;
+	geo:lat "-136.80254702"^^xsd:double ;
+	geo:long "-36.71569913"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/108> prov:location <http://purl.org/twc/skitter/tweet/108/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/109> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2013-07-183 22:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/109/location> a geo:Point ;
+	geo:lat "-65.72568362"^^xsd:double ;
+	geo:long "133.07945227"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/109> prov:location <http://purl.org/twc/skitter/tweet/109/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/110> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2013-06-164 12:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/110/location> a geo:Point ;
+	geo:lat "-48.90430647"^^xsd:double ;
+	geo:long "50.58671264"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/110> prov:location <http://purl.org/twc/skitter/tweet/110/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/111> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-08-242 12:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/111/location> a geo:Point ;
+	geo:lat "75.52283442"^^xsd:double ;
+	geo:long "83.79718954"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/111> prov:location <http://purl.org/twc/skitter/tweet/111/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/112> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2011-07-205 20:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/112/location> a geo:Point ;
+	geo:lat "-64.13686728"^^xsd:double ;
+	geo:long "160.78953441"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/112> prov:location <http://purl.org/twc/skitter/tweet/112/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/113> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-04-94 22:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/113/location> a geo:Point ;
+	geo:lat "128.30294788"^^xsd:double ;
+	geo:long "-67.60686059"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/113> prov:location <http://purl.org/twc/skitter/tweet/113/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/114> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2011-12-338 19:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/114/location> a geo:Point ;
+	geo:lat "-21.73863748"^^xsd:double ;
+	geo:long "125.5857764"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/114> prov:location <http://purl.org/twc/skitter/tweet/114/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/115> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-05-143 05:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/115/location> a geo:Point ;
+	geo:lat "71.81535233"^^xsd:double ;
+	geo:long "48.07298614"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/115> prov:location <http://purl.org/twc/skitter/tweet/115/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/116> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2013-06-165 22:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/116/location> a geo:Point ;
+	geo:lat "-87.46022554"^^xsd:double ;
+	geo:long "17.44966387"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/116> prov:location <http://purl.org/twc/skitter/tweet/116/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/117> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-07-209 16:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/117/location> a geo:Point ;
+	geo:lat "-46.08419034"^^xsd:double ;
+	geo:long "-85.57711936"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/117> prov:location <http://purl.org/twc/skitter/tweet/117/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/118> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2011-12-348 04:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/118/location> a geo:Point ;
+	geo:lat "18.39980743"^^xsd:double ;
+	geo:long "-85.99158411"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/118> prov:location <http://purl.org/twc/skitter/tweet/118/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/119> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2013-01-10 08:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/119/location> a geo:Point ;
+	geo:lat "-52.05537276"^^xsd:double ;
+	geo:long "-83.51135341"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/119> prov:location <http://purl.org/twc/skitter/tweet/119/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/120> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2013-02-33 07:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/120/location> a geo:Point ;
+	geo:lat "162.77117194"^^xsd:double ;
+	geo:long "-134.49782788"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/120> prov:location <http://purl.org/twc/skitter/tweet/120/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/121> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-08-240 01:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/121/location> a geo:Point ;
+	geo:lat "27.91960848"^^xsd:double ;
+	geo:long "-7.7320191"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/121> prov:location <http://purl.org/twc/skitter/tweet/121/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/122> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2013-06-159 21:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/122/location> a geo:Point ;
+	geo:lat "61.50911265"^^xsd:double ;
+	geo:long "-47.64001754"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/122> prov:location <http://purl.org/twc/skitter/tweet/122/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/123> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-08-226 17:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/123/location> a geo:Point ;
+	geo:lat "126.11918889"^^xsd:double ;
+	geo:long "-140.30656139"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/123> prov:location <http://purl.org/twc/skitter/tweet/123/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/124> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-06-172 16:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/124/location> a geo:Point ;
+	geo:lat "-147.86112649"^^xsd:double ;
+	geo:long "-54.01783948"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/124> prov:location <http://purl.org/twc/skitter/tweet/124/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/125> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-10-297 02:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/125/location> a geo:Point ;
+	geo:lat "-87.36585985"^^xsd:double ;
+	geo:long "140.55299072"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/125> prov:location <http://purl.org/twc/skitter/tweet/125/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/126> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-09-245 21:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/126/location> a geo:Point ;
+	geo:lat "-125.7154564"^^xsd:double ;
+	geo:long "132.0496842"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/126> prov:location <http://purl.org/twc/skitter/tweet/126/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/127> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2011-09-245 01:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/127/location> a geo:Point ;
+	geo:lat "-19.61976839"^^xsd:double ;
+	geo:long "54.03297187"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/127> prov:location <http://purl.org/twc/skitter/tweet/127/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/128> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-01-26 10:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/128/location> a geo:Point ;
+	geo:lat "125.79426005"^^xsd:double ;
+	geo:long "178.25806934"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/128> prov:location <http://purl.org/twc/skitter/tweet/128/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/129> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2011-10-293 05:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/129/location> a geo:Point ;
+	geo:lat "-72.90778356"^^xsd:double ;
+	geo:long "-116.23806979"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/129> prov:location <http://purl.org/twc/skitter/tweet/129/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/130> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-01-30 07:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/130/location> a geo:Point ;
+	geo:lat "59.26917605"^^xsd:double ;
+	geo:long "99.31069137"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/130> prov:location <http://purl.org/twc/skitter/tweet/130/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/131> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-12-343 06:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/131/location> a geo:Point ;
+	geo:lat "60.25034757"^^xsd:double ;
+	geo:long "4.74031308"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/131> prov:location <http://purl.org/twc/skitter/tweet/131/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/132> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2013-02-35 04:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/132/location> a geo:Point ;
+	geo:lat "-87.81050508"^^xsd:double ;
+	geo:long "135.29929483"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/132> prov:location <http://purl.org/twc/skitter/tweet/132/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/133> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-08-240 01:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/133/location> a geo:Point ;
+	geo:lat "-40.08448584"^^xsd:double ;
+	geo:long "-52.28952718"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/133> prov:location <http://purl.org/twc/skitter/tweet/133/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/134> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-11-310 19:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/134/location> a geo:Point ;
+	geo:lat "74.85408073"^^xsd:double ;
+	geo:long "-26.85929915"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/134> prov:location <http://purl.org/twc/skitter/tweet/134/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/135> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2013-06-157 09:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/135/location> a geo:Point ;
+	geo:lat "-4.02451356"^^xsd:double ;
+	geo:long "-97.44954882"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/135> prov:location <http://purl.org/twc/skitter/tweet/135/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/136> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-04-99 17:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/136/location> a geo:Point ;
+	geo:lat "-161.54518678"^^xsd:double ;
+	geo:long "-107.01790855"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/136> prov:location <http://purl.org/twc/skitter/tweet/136/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/137> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2013-04-116 20:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/137/location> a geo:Point ;
+	geo:lat "175.14806377"^^xsd:double ;
+	geo:long "157.21911892"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/137> prov:location <http://purl.org/twc/skitter/tweet/137/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/138> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2011-09-245 20:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/138/location> a geo:Point ;
+	geo:lat "91.24007084"^^xsd:double ;
+	geo:long "-20.52064423"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/138> prov:location <http://purl.org/twc/skitter/tweet/138/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/139> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2013-03-90 15:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/139/location> a geo:Point ;
+	geo:lat "-95.24622516"^^xsd:double ;
+	geo:long "-23.78917148"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/139> prov:location <http://purl.org/twc/skitter/tweet/139/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/140> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-05-146 17:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/140/location> a geo:Point ;
+	geo:lat "129.75276305"^^xsd:double ;
+	geo:long "80.86758996"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/140> prov:location <http://purl.org/twc/skitter/tweet/140/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/141> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2013-05-147 09:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/141/location> a geo:Point ;
+	geo:lat "-31.87080404"^^xsd:double ;
+	geo:long "-166.83851513"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/141> prov:location <http://purl.org/twc/skitter/tweet/141/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/142> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-01-06 09:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/142/location> a geo:Point ;
+	geo:lat "-67.95274869"^^xsd:double ;
+	geo:long "-146.57228432"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/142> prov:location <http://purl.org/twc/skitter/tweet/142/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/143> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-05-145 06:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/143/location> a geo:Point ;
+	geo:lat "-79.16867827"^^xsd:double ;
+	geo:long "152.07548965"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/143> prov:location <http://purl.org/twc/skitter/tweet/143/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/144> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-05-143 19:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/144/location> a geo:Point ;
+	geo:lat "-82.72441573"^^xsd:double ;
+	geo:long "156.31429796"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/144> prov:location <http://purl.org/twc/skitter/tweet/144/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/145> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-06-153 11:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/145/location> a geo:Point ;
+	geo:lat "-19.1474914"^^xsd:double ;
+	geo:long "-134.34403662"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/145> prov:location <http://purl.org/twc/skitter/tweet/145/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/146> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2011-08-218 10:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/146/location> a geo:Point ;
+	geo:lat "-81.31185523"^^xsd:double ;
+	geo:long "-59.02719647"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/146> prov:location <http://purl.org/twc/skitter/tweet/146/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/147> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-09-267 18:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/147/location> a geo:Point ;
+	geo:lat "-112.28415882"^^xsd:double ;
+	geo:long "56.20647397"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/147> prov:location <http://purl.org/twc/skitter/tweet/147/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/148> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-07-209 21:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/148/location> a geo:Point ;
+	geo:lat "-135.04780658"^^xsd:double ;
+	geo:long "128.28551128"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/148> prov:location <http://purl.org/twc/skitter/tweet/148/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/149> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-03-63 04:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/149/location> a geo:Point ;
+	geo:lat "31.27943029"^^xsd:double ;
+	geo:long "-125.44715475"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/149> prov:location <http://purl.org/twc/skitter/tweet/149/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/150> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2011-09-252 11:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/150/location> a geo:Point ;
+	geo:lat "13.02980243"^^xsd:double ;
+	geo:long "-69.31535468"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/150> prov:location <http://purl.org/twc/skitter/tweet/150/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/151> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-06-176 18:06:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/151/location> a geo:Point ;
+	geo:lat "-130.13035944"^^xsd:double ;
+	geo:long "130.07846807"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/151> prov:location <http://purl.org/twc/skitter/tweet/151/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/152> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-03-67 08:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/152/location> a geo:Point ;
+	geo:lat "-71.81833727"^^xsd:double ;
+	geo:long "-178.58110052"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/152> prov:location <http://purl.org/twc/skitter/tweet/152/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/153> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-07-196 00:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/153/location> a geo:Point ;
+	geo:lat "22.76447775"^^xsd:double ;
+	geo:long "174.54735017"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/153> prov:location <http://purl.org/twc/skitter/tweet/153/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/154> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2013-01-21 18:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/154/location> a geo:Point ;
+	geo:lat "-98.10416979"^^xsd:double ;
+	geo:long "-131.49431976"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/154> prov:location <http://purl.org/twc/skitter/tweet/154/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/155> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-09-252 06:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/155/location> a geo:Point ;
+	geo:lat "7.10132939"^^xsd:double ;
+	geo:long "-32.54549381"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/155> prov:location <http://purl.org/twc/skitter/tweet/155/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/156> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2012-09-264 06:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/156/location> a geo:Point ;
+	geo:lat "173.24483533"^^xsd:double ;
+	geo:long "-108.71699944"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/156> prov:location <http://purl.org/twc/skitter/tweet/156/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/157> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-04-102 02:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/157/location> a geo:Point ;
+	geo:lat "-106.70727134"^^xsd:double ;
+	geo:long "-109.79227872"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/157> prov:location <http://purl.org/twc/skitter/tweet/157/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/158> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2013-01-02 04:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/158/location> a geo:Point ;
+	geo:lat "-39.76671515"^^xsd:double ;
+	geo:long "-52.37631915"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/158> prov:location <http://purl.org/twc/skitter/tweet/158/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/159> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-12-340 00:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/159/location> a geo:Point ;
+	geo:lat "-153.5693895"^^xsd:double ;
+	geo:long "-75.68818391"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/159> prov:location <http://purl.org/twc/skitter/tweet/159/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/160> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2011-09-256 21:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/160/location> a geo:Point ;
+	geo:lat "-112.70399661"^^xsd:double ;
+	geo:long "-166.44083258"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/160> prov:location <http://purl.org/twc/skitter/tweet/160/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/161> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-08-240 20:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/161/location> a geo:Point ;
+	geo:lat "-165.65280821"^^xsd:double ;
+	geo:long "152.95470626"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/161> prov:location <http://purl.org/twc/skitter/tweet/161/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/162> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2011-08-238 07:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/162/location> a geo:Point ;
+	geo:lat "-111.37335511"^^xsd:double ;
+	geo:long "88.50563645"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/162> prov:location <http://purl.org/twc/skitter/tweet/162/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/163> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-01-27 21:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/163/location> a geo:Point ;
+	geo:lat "-95.75114614"^^xsd:double ;
+	geo:long "-149.08384663"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/163> prov:location <http://purl.org/twc/skitter/tweet/163/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/164> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-11-324 21:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/164/location> a geo:Point ;
+	geo:lat "-36.92455168"^^xsd:double ;
+	geo:long "121.24294736"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/164> prov:location <http://purl.org/twc/skitter/tweet/164/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/165> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-08-234 20:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/165/location> a geo:Point ;
+	geo:lat "45.8114088"^^xsd:double ;
+	geo:long "118.73359844"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/165> prov:location <http://purl.org/twc/skitter/tweet/165/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/166> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2012-09-272 15:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/166/location> a geo:Point ;
+	geo:lat "76.35670989"^^xsd:double ;
+	geo:long "139.48388067"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/166> prov:location <http://purl.org/twc/skitter/tweet/166/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/167> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2012-04-93 07:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/167/location> a geo:Point ;
+	geo:lat "-45.25727611"^^xsd:double ;
+	geo:long "89.40607346"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/167> prov:location <http://purl.org/twc/skitter/tweet/167/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/168> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-03-85 01:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/168/location> a geo:Point ;
+	geo:lat "134.17662684"^^xsd:double ;
+	geo:long "41.71933174"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/168> prov:location <http://purl.org/twc/skitter/tweet/168/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/169> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-10-299 13:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/169/location> a geo:Point ;
+	geo:lat "101.33501505"^^xsd:double ;
+	geo:long "-38.54904286"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/169> prov:location <http://purl.org/twc/skitter/tweet/169/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/170> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2013-03-67 11:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/170/location> a geo:Point ;
+	geo:lat "-145.3958616"^^xsd:double ;
+	geo:long "-3.56154746"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/170> prov:location <http://purl.org/twc/skitter/tweet/170/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/171> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2013-05-126 05:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/171/location> a geo:Point ;
+	geo:lat "-91.70099242"^^xsd:double ;
+	geo:long "-10.38095463"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/171> prov:location <http://purl.org/twc/skitter/tweet/171/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/172> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2011-08-235 05:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/172/location> a geo:Point ;
+	geo:lat "164.06191671"^^xsd:double ;
+	geo:long "138.79219863"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/172> prov:location <http://purl.org/twc/skitter/tweet/172/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/173> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-04-99 15:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/173/location> a geo:Point ;
+	geo:lat "30.55309754"^^xsd:double ;
+	geo:long "-96.6489068"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/173> prov:location <http://purl.org/twc/skitter/tweet/173/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/174> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2012-08-220 00:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/174/location> a geo:Point ;
+	geo:lat "-109.9466014"^^xsd:double ;
+	geo:long "159.08055232"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/174> prov:location <http://purl.org/twc/skitter/tweet/174/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/175> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-03-67 23:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/175/location> a geo:Point ;
+	geo:lat "169.09030887"^^xsd:double ;
+	geo:long "55.25404668"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/175> prov:location <http://purl.org/twc/skitter/tweet/175/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/176> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2012-02-40 02:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/176/location> a geo:Point ;
+	geo:lat "-21.60337818"^^xsd:double ;
+	geo:long "-140.23762889"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/176> prov:location <http://purl.org/twc/skitter/tweet/176/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/177> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2012-10-293 08:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/177/location> a geo:Point ;
+	geo:lat "119.59549655"^^xsd:double ;
+	geo:long "-167.8947061"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/177> prov:location <http://purl.org/twc/skitter/tweet/177/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/178> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2011-12-345 14:12:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/178/location> a geo:Point ;
+	geo:lat "-157.26829732"^^xsd:double ;
+	geo:long "-128.78110152"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/178> prov:location <http://purl.org/twc/skitter/tweet/178/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/179> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2012-03-63 20:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/179/location> a geo:Point ;
+	geo:lat "-163.65532312"^^xsd:double ;
+	geo:long "104.6609982"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/179> prov:location <http://purl.org/twc/skitter/tweet/179/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/180> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2011-09-252 06:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/180/location> a geo:Point ;
+	geo:lat "-144.8008232"^^xsd:double ;
+	geo:long "145.40302697"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/180> prov:location <http://purl.org/twc/skitter/tweet/180/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/181> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2011-08-235 13:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/181/location> a geo:Point ;
+	geo:lat "-109.3969558"^^xsd:double ;
+	geo:long "-88.85954403"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/181> prov:location <http://purl.org/twc/skitter/tweet/181/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/182> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2012-01-03 00:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/182/location> a geo:Point ;
+	geo:lat "40.20326882"^^xsd:double ;
+	geo:long "-143.60342101"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/182> prov:location <http://purl.org/twc/skitter/tweet/182/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> .
+
+<http://purl.org/twc/skitter/tweet/183> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-07-204 09:07:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/183/location> a geo:Point ;
+	geo:lat "28.35397232"^^xsd:double ;
+	geo:long "49.43005271"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/183> prov:location <http://purl.org/twc/skitter/tweet/183/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/184> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Myalgia> ;
+	dc:date "2013-05-135 20:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/184/location> a geo:Point ;
+	geo:lat "-123.38119153"^^xsd:double ;
+	geo:long "179.06919054"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/184> prov:location <http://purl.org/twc/skitter/tweet/184/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> .
+
+<http://purl.org/twc/skitter/tweet/185> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> ;
+	dc:date "2012-04-95 18:04:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/185/location> a geo:Point ;
+	geo:lat "-46.3278828"^^xsd:double ;
+	geo:long "-30.06623976"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/185> prov:location <http://purl.org/twc/skitter/tweet/185/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> .
+
+<http://purl.org/twc/skitter/tweet/186> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2013-05-130 22:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/186/location> a geo:Point ;
+	geo:lat "-55.83454859"^^xsd:double ;
+	geo:long "152.0891254"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/186> prov:location <http://purl.org/twc/skitter/tweet/186/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/187> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2013-01-18 10:01:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/187/location> a geo:Point ;
+	geo:lat "84.63084365"^^xsd:double ;
+	geo:long "165.02161694"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/187> prov:location <http://purl.org/twc/skitter/tweet/187/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
+
+<http://purl.org/twc/skitter/tweet/188> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-09-273 19:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/188/location> a geo:Point ;
+	geo:lat "84.62519972"^^xsd:double ;
+	geo:long "-162.9924836"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/188> prov:location <http://purl.org/twc/skitter/tweet/188/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/189> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> ;
+	dc:date "2011-10-298 01:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/189/location> a geo:Point ;
+	geo:lat "-81.11830459"^^xsd:double ;
+	geo:long "61.98611471"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/189> prov:location <http://purl.org/twc/skitter/tweet/189/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/190> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> ;
+	dc:date "2011-09-249 04:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/190/location> a geo:Point ;
+	geo:lat "122.8570134"^^xsd:double ;
+	geo:long "72.95007318"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/190> prov:location <http://purl.org/twc/skitter/tweet/190/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/191> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2013-05-123 21:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/191/location> a geo:Point ;
+	geo:lat "69.22430034"^^xsd:double ;
+	geo:long "-77.36743363"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/191> prov:location <http://purl.org/twc/skitter/tweet/191/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/192> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-11-330 06:11:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/192/location> a geo:Point ;
+	geo:lat "-27.08391845"^^xsd:double ;
+	geo:long "-63.77652767"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/192> prov:location <http://purl.org/twc/skitter/tweet/192/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+<http://purl.org/twc/skitter/tweet/193> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2013-02-47 21:02:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/193/location> a geo:Point ;
+	geo:lat "-26.95701125"^^xsd:double ;
+	geo:long "-57.38340298"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/193> prov:location <http://purl.org/twc/skitter/tweet/193/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Flu> .
+
+<http://purl.org/twc/skitter/tweet/194> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2012-03-90 03:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/194/location> a geo:Point ;
+	geo:lat "49.14020943"^^xsd:double ;
+	geo:long "7.37817839"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/194> prov:location <http://purl.org/twc/skitter/tweet/194/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/195> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> ;
+	dc:date "2011-08-224 01:08:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/195/location> a geo:Point ;
+	geo:lat "-14.97586753"^^xsd:double ;
+	geo:long "-116.67178308"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/195> prov:location <http://purl.org/twc/skitter/tweet/195/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> .
+
+<http://purl.org/twc/skitter/tweet/196> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Vomit> ;
+	dc:date "2013-03-74 21:03:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/196/location> a geo:Point ;
+	geo:lat "133.59172494"^^xsd:double ;
+	geo:long "-3.01253744"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/196> prov:location <http://purl.org/twc/skitter/tweet/196/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/197> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Cough> ;
+	dc:date "2012-05-142 01:05:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/197/location> a geo:Point ;
+	geo:lat "-128.57722005"^^xsd:double ;
+	geo:long "126.71497485"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/197> prov:location <http://purl.org/twc/skitter/tweet/197/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fever> .
+
+<http://purl.org/twc/skitter/tweet/198> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> ;
+	dc:date "2011-10-278 10:10:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/198/location> a geo:Point ;
+	geo:lat "57.02706538"^^xsd:double ;
+	geo:long "14.39959164"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/198> prov:location <http://purl.org/twc/skitter/tweet/198/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Fatigue> .
+
+<http://purl.org/twc/skitter/tweet/199> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Runny_Nose> ;
+	dc:date "2011-09-267 03:09:00"^^xsd:dateTime .
+
+<http://purl.org/twc/skitter/tweet/199/location> a geo:Point ;
+	geo:lat "-28.07931178"^^xsd:double ;
+	geo:long "94.24084636"^^xsd:double .
+
+<http://purl.org/twc/skitter/tweet/199> prov:location <http://purl.org/twc/skitter/tweet/199/location> ;
+	dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Headache> .
