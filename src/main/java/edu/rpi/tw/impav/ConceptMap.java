@@ -197,6 +197,7 @@ public class ConceptMap {
                     
                     labels.add(label);
                     
+                    // comment
 //                    UpdateRequest request = UpdateFactory.create() ;
 //                    request.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>")
 //                    	   .add("INSERT INTO <http://localhost:3030/dataset/update>") 
