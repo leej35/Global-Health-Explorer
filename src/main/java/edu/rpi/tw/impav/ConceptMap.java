@@ -197,15 +197,18 @@ public class ConceptMap {
                     
                     labels.add(label);
                     
+                    //Following is the things that needed to be fixed: 
+                    //Develop UPDATE query and specify the SPARQL Endpoint (update) URI
+                    
                     // comment
-//                    UpdateRequest request = UpdateFactory.create() ;
-//                    request.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>")
-//                    	   .add("INSERT INTO <http://localhost:3030/dataset/update>") 
-//                    	   .add("{ <http://example/book3> dc:title    'A new book' ;")
-//                    	   .add("dc:creator  'A.N.Other' .}");
-//
-//                    // And perform the operations.
-//                    UpdateAction.execute(request, graphStore) ;
+                    UpdateRequest request = UpdateFactory.create() ;
+                    request.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>")
+                    	   .add("INSERT INTO <http://localhost:3030/dataset/update>") 
+                    	   .add("{ <http://example/book3> dc:title    'A new book' ;")
+                    	   .add("dc:creator  'A.N.Other' .}");
+
+                    // And perform the operations.
+                    UpdateAction.execute(request, graphStore) ;
 
                 }
             }
