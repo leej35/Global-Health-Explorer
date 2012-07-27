@@ -206,7 +206,7 @@ public class ConceptMap {
                     request.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>  INSERT DATA { GRAPH <http://example/bookStore> {<http://example/book6/> dc:title \"A new book\"; dc:creator \"J.M. Lee\".}}");
                     System.out.println("request: " + request.toString());	   
                     	   
-                    UpdateRemote.execute(request, "http://localhost:3030/ds/update");
+                    UpdateRemote.execute(request, "http://localhost:3030/ds/update/");
 
                 }
             }
