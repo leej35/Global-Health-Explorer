@@ -9,6 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.jena.fuseki.http.UpdateRemote;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -201,14 +202,11 @@ public class ConceptMap {
                     //Develop UPDATE query and specify the SPARQL Endpoint (update) URI
                     
                     // comment
-                    UpdateRequest request = UpdateFactory.create() ;
-                    request.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>")
-                    	   .add("INSERT INTO <http://localhost:3030/dataset/update>") 
-                    	   .add("{ <http://example/book3> dc:title    'A new book' ;")
-                    	   .add("dc:creator  'A.N.Other' .}");
-
-                    // And perform the operations.
-                    UpdateAction.execute(request, graphStore) ;
+                    UpdateRequest request = UpdateFactory.create();
+                    request.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>  INSERT DATA { GRAPH <http://example/bookStore> {<http://example/book6/> dc:title 'A new book'; dc:creator 'J.M. Lee'.}");
+                    System.out.println("request: " + request.toString());	   
+                    	   
+                    UpdateRemote.execute(request, "http://localhost:3030/ds/update");
 
                 }
             }
