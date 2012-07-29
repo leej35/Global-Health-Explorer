@@ -104,18 +104,34 @@ public class TweetQueue implements StatusListener {
     
 
     public static void main(String[] args) throws CorruptIndexException, LockObtainFailedException, IOException, TwitterException, BackingStoreException {
-		String queryText = 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+
+    	//test query for scalability upto full NCI Thesaurus 
+    	String queryText = 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
 				"PREFIX bfo: <http://www.ifomis.org/bfo/1.1#Entity>" +
 				"PREFIX obo: <http://purl.obolibrary.org/obo/>" +
 				"PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>" +
 				"CONSTRUCT {"+
-				"?s skos:prefLabel ?symptomName."+
+				"?s skos:prefLabel ?termName."+
 				"?s a skos:Concept." +
 				"}WHERE{" +
-				"GRAPH <http://bioportal.bioontology.org/ontologies/FLU>{" +
-				"?s ?p <http://purl.obolibrary.org/obo/OGMS_0000020>." +
-				"?s <http://bioportal.bioontology.org/metadata/def/prefLabel> ?symptomName. "+
-				"}}";
+				"GRAPH <http://bioportal.bioontology.org/ontologies/NCIT>{" +
+				"?s rdfs:label ?termName." +
+				"}" +
+				"}";
+		
+		//-- Flu Ontology -------
+//		String queryText = 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+//				"PREFIX bfo: <http://www.ifomis.org/bfo/1.1#Entity>" +
+//				"PREFIX obo: <http://purl.obolibrary.org/obo/>" +
+//				"PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>" +
+//				"CONSTRUCT {"+
+//				"?s skos:prefLabel ?symptomName."+
+//				"?s a skos:Concept." +
+//				"}WHERE{" +
+//				"GRAPH <http://bioportal.bioontology.org/ontologies/FLU>{" +
+//				"?s ?p <http://purl.obolibrary.org/obo/OGMS_0000020>." +
+//				"?s <http://bioportal.bioontology.org/metadata/def/prefLabel> ?symptomName. "+
+//				"}}";
 
 
 		

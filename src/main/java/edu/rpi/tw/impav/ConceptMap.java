@@ -157,9 +157,6 @@ public class ConceptMap {
     
     }
     
-//	geo:lat "-106.35695363"^^xsd:double ;
-//	geo:long "-47.3897595"^^xsd:double .
-
     
     public List<Individual> getConcepts(Status status) {
     	String tweet = status.getText();
@@ -185,23 +182,11 @@ public class ConceptMap {
                     // Export model for debugging
                 	//for debugging
                 	System.out.println("status:" + status.toString());
-
-                    BufferedWriter out = new BufferedWriter(new FileWriter("./out.txt"));
-                    out.append("status" + status.toString());out.newLine();
-                    out.append(model.toString()); out.newLine();
-                    out.append("label:" + label.toString());out.newLine();
-                    out.append("Original tweet:" + tweet);out.newLine();
-                    out.append("Time:" + status.getCreatedAt());out.newLine();
-                    out.append("Location: " + getGeocoord(status.toString().toString()));out.newLine();
-                    out.close();
-
-                    //for debugging
                     System.out.println("label:" + label.toString());
                     System.out.println("tweet:" + tweet);
                     System.out.println("time:" + status.getCreatedAt());
                     System.out.println("location: " + getGeocoord(status.toString()).toString() + "\n");
-                    
-                    
+                                       
                     labels.add(label);
                     
                     UpdateRequest request = UpdateFactory.create();
@@ -215,7 +200,6 @@ public class ConceptMap {
                     }
                     
                     System.out.println("request: " + request.toString());	   
-
                     UpdateRemote.execute(request, "http://localhost:3030/ds/update");
                     count++;
                     
