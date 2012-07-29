@@ -205,25 +205,6 @@ public class ConceptMap {
                     labels.add(label);
                     
                     UpdateRequest request = UpdateFactory.create();
-//                    request.add("PREFIX dc: <http://purl.org/dc/terms/>")
-//                    .add("PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>")
-//                    .add("PREFIX prov: <http://www.w3.org/ns/prov#>")
-//                    .add("PREFIX ogc: <http://www.opengis.net/rdf#> ")
-//                    .add("PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> ")
-//                    .add("PREFIX foaf: <http://xmlns.com/foaf/0.1/> ")
-//                    .add("PREFIX owl: <http://www.w3.org/2002/07/owl#> ")
-//                    .add("PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> ")
-//                    .add("PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ")
-//                    .add("INSERT DATA{")
-//                    .add("<http://purl.org/twc/skitter/tweet/" + count  + "> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label.toString() + ">;")
-//                    .add("dc:date \"" + status.getCreatedAt() + "\"^^xsd:dateTime .");
-//                    
-//                    System.out.println("request: " + request.toString());	   
-
-                    	   
-                    
-                    //<http://purl.org/twc/skitter/tweet/0/location> a geo:Point ;	geo:lat \"-106.35695363\"^^xsd:double ;	geo:long \"-47.3897595\"^^xsd:double .<http://purl.org/twc/skitter/tweet/0> prov:location <http://purl.org/twc/skitter/tweet/0/location> ; dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
-
                     
                     String geoCoord = getGeocoord(status.toString()).toString();
                     if(geoCoord.compareTo("null") < 0){
