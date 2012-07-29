@@ -74,6 +74,8 @@ public class ConceptMap {
 
     private HashSet<String> stopwords = loadStopwords();
     
+    private int count = 0;
+    
     GraphStore graphStore = GraphStoreFactory.create() ;
 
     public ConceptMap(String fileOrURI) throws CorruptIndexException,
@@ -151,9 +153,13 @@ public class ConceptMap {
     	int lonEnd = status.indexOf("}", lonAt);
     	String latitude = status.substring(latAt, latEnd);
     	String longitude = status.substring(lonAt, lonEnd);
-		return "latitude: " + latitude + " longitude: " + longitude;
+		return "geo:lat \"" + latitude + "\"^^xsd:double; \n geo:long \"" + longitude +"\"^^xsd:double";
     
     }
+    
+//	geo:lat "-106.35695363"^^xsd:double ;
+//	geo:long "-47.3897595"^^xsd:double .
+
     
     public List<Individual> getConcepts(Status status) {
     	String tweet = status.getText();
@@ -198,16 +204,40 @@ public class ConceptMap {
                     
                     labels.add(label);
                     
-                    //Following is the things that needed to be fixed: 
-                    //Develop UPDATE query and specify the SPARQL Endpoint (update) URI
-                    
-                    // comment
                     UpdateRequest request = UpdateFactory.create();
-                    request.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>  INSERT DATA { GRAPH <http://example/bookStore> {<http://example/book6/> dc:title \"A new book\"; dc:creator \"J.M. Lee\".}}");
-                    System.out.println("request: " + request.toString());	   
-                    	   
-                    UpdateRemote.execute(request, "http://localhost:3030/ds/update/");
+//                    request.add("PREFIX dc: <http://purl.org/dc/terms/>")
+//                    .add("PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>")
+//                    .add("PREFIX prov: <http://www.w3.org/ns/prov#>")
+//                    .add("PREFIX ogc: <http://www.opengis.net/rdf#> ")
+//                    .add("PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> ")
+//                    .add("PREFIX foaf: <http://xmlns.com/foaf/0.1/> ")
+//                    .add("PREFIX owl: <http://www.w3.org/2002/07/owl#> ")
+//                    .add("PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> ")
+//                    .add("PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ")
+//                    .add("INSERT DATA{")
+//                    .add("<http://purl.org/twc/skitter/tweet/" + count  + "> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label.toString() + ">;")
+//                    .add("dc:date \"" + status.getCreatedAt() + "\"^^xsd:dateTime .");
+//                    
+//                    System.out.println("request: " + request.toString());	   
 
+                    	   
+                    
+                    //<http://purl.org/twc/skitter/tweet/0/location> a geo:Point ;	geo:lat \"-106.35695363\"^^xsd:double ;	geo:long \"-47.3897595\"^^xsd:double .<http://purl.org/twc/skitter/tweet/0> prov:location <http://purl.org/twc/skitter/tweet/0/location> ; dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Malaria> .
+
+                    
+                    String geoCoord = getGeocoord(status.toString()).toString();
+                    if(geoCoord.compareTo("null") < 0){
+                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label.toString() + "> ;	dc:date \"" + status.getCreatedAt() + "\"^^xsd:dateTime . <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point;"+ geoCoord + "<http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.}" );
+                    }
+                    else{
+                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label.toString() + "> ;	dc:date \"" + status.getCreatedAt() + "\"^^xsd:dateTime .}");
+                    }
+                    
+                    System.out.println("request: " + request.toString());	   
+
+                    UpdateRemote.execute(request, "http://localhost:3030/ds/update");
+                    count++;
+                    
                 }
             }
         } catch (ParseException e) {
