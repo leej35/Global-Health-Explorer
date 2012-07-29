@@ -1,7 +1,25 @@
+
+
 What's working
+
+(brief process)
+
+a) initiation
+Get CONSTRUCT from (any) ontology -> Lucene make index of terms from CONSTRUCT (label) 
+-> Twitter4j gets twitter stream
+
+b) every time that new tweet comes
+a method, "getConcepts(Status status)"(line 161, ConceptMap.java) searches keywords in an  that text in a new tweet  
+-> if there is, from line 181 - 206, ConceptMap.java -> create UpdateRequest -> check the indextweet has geo-location -> add UPDATE phrase in regard with existance of geo-location info.
+
+
+
+(what's working, summary)
 - get Influenza Onotolgy's symptoms and index, update it.
 - get NCI Thesaurus's full terms  and index it , and update tweets related with it. (to do a scalbility test)   
 - (to fuseki) update without geolocation, only with term and date is working
+
+
 
 What is not working
 
