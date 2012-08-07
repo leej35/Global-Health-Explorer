@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -65,12 +66,13 @@ public class TweetQueue implements StatusListener {
     	if(latAt == -1){
     		return "null";
     	} 
+    	latAt = latAt+10;
     	int latEnd = status.indexOf(",",latAt);
     	int lonAt = status.indexOf("longitude") + 10;
     	int lonEnd = status.indexOf("}", lonAt);
     	String latitude = status.substring(latAt, latEnd);
     	String longitude = status.substring(lonAt, lonEnd);
-		return "geo:lat \"" + latitude + "\"^^xsd:double; \n geo:long \"" + longitude +"\"^^xsd:double";
+		return "geo:lat \"" + latitude + "\"^^xsd:double; \n geo:long \"" + longitude +"\"^^xsd:double .";
     
     }
     @Override
@@ -87,9 +89,7 @@ public class TweetQueue implements StatusListener {
     	List<Individual> individuals = concepts.getConcepts(status);
     	
     	if (individuals.size() > 0) {
-    		
-    		System.out.println("called?");
-    		
+    		ArrayList<String> labels = new ArrayList<String>(); 		
     		Tweet tweet = new Tweet();
     		tweet.termVector = individuals;
     		tweet.text = status.getText();
@@ -97,14 +97,12 @@ public class TweetQueue implements StatusListener {
     		tweet.creator = status.getUser();
     		tweet.location = getGeocoord(status.toString());
     		tweet.added = new Date();
-    		List<String> labels = null;
+    		tweet.originalText = status.toString();
     		for(Individual i : individuals){
     			String label = i.getPropertyValue(concepts.getSkosPrefLabel()).asLiteral().getString();
     			labels.add(label);
     		}
-    		System.out.println("labels @ TweetQueue: "+ labels.toString());
-    		tweet.labels = labels;
-    		
+    		tweet.labels = labels;    		
     		tweets.add(tweet);
         }
     }	
@@ -121,51 +119,8 @@ public class TweetQueue implements StatusListener {
     }
     
 
-    public static void main(String[] args) throws CorruptIndexException, LockObtainFailedException, IOException, TwitterException, BackingStoreException {
+    public static void main(String[] args) throws CorruptIndexException, LockObtainFailedException, IOException, TwitterException, BackingStoreException {		
 
-    	//test query for scalability upto full NCI Thesaurus 
-//    	String queryText = 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-//				"PREFIX bfo: <http://www.ifomis.org/bfo/1.1#Entity>" +
-//				"PREFIX obo: <http://purl.obolibrary.org/obo/>" +
-//				"PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>" +
-//				"CONSTRUCT {"+
-//				"?s skos:prefLabel ?termName."+
-//				"?s a skos:Concept." +
-//				"}WHERE{" +
-//				"GRAPH <http://bioportal.bioontology.org/ontologies/NCIT>{" +
-//				"?s rdfs:label ?termName." +
-//				"}" +
-//				"}";
-		
-//		-- Flu Ontology -------
-//		String queryText = 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-//				"PREFIX bfo: <http://www.ifomis.org/bfo/1.1#Entity>" +
-//				"PREFIX obo: <http://purl.obolibrary.org/obo/>" +
-//				"PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>" +
-//				"CONSTRUCT {"+
-//				"?s skos:prefLabel ?symptomName."+
-//				"?s a skos:Concept." +
-//				"}WHERE{" +
-//				"GRAPH <http://bioportal.bioontology.org/ontologies/FLU>{" +
-//				"?s ?p <http://purl.obolibrary.org/obo/OGMS_0000020>." +
-//				"?s <http://bioportal.bioontology.org/metadata/def/prefLabel> ?symptomName. "+
-//				"}}";
-//
-//
-//		
-//		String sparqlService = "http://sparql.bioontology.org/sparql";
-//		String apikey = "b2aa80e5-8af9-4cc8-9226-55547c5faa65";
-//
-//		
-//		String httpQueryString = String.format("query=%s&apikey=%s", 
-//			     URLEncoder.encode(queryText, "UTF-8"), 
-//			     apikey);
-//		
-//		String url = sparqlService + "?" + httpQueryString;
-//		System.out.println(url);
-//    	TweetQueue queue = new TweetQueue(url);//args[0]
-//        queue.start();
-//        System.out.println("Back?");
     }
 
 }

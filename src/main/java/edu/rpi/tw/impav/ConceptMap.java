@@ -59,7 +59,6 @@ import java.io.*;
 
 public class ConceptMap {
 	
-
     public static final String SKOS = "http://www.w3.org/2004/02/skos/core#";
     public static final String RDFs = "http://www.w3.org/2000/01/rdf-schema#";
     
@@ -75,7 +74,6 @@ public class ConceptMap {
 
     private HashSet<String> stopwords = loadStopwords();
     
-    private int count = 0;
     
     GraphStore graphStore = GraphStoreFactory.create() ;
 
@@ -117,33 +115,27 @@ public class ConceptMap {
     private void loadConcepts() throws CorruptIndexException,
             LockObtainFailedException, IOException {
         IndexWriter writer = new IndexWriter(index, new StandardAnalyzer(Version.LUCENE_30), MaxFieldLength.LIMITED);
-        
+        int i=0;
         for (Individual concept : (List<Individual>)skosConcept.listInstances().toList()) {
             String uri = concept.getURI();
-            //for debugging
-            System.out.println("uri:" + uri);
             
             Document doc = new Document();
             doc.add(new Field("uri", uri, Store.YES, Index.NOT_ANALYZED_NO_NORMS));
             for (Statement stmt : (List<Statement>)concept.listProperties(skosPrefLabel).toList()) {
                 if (stmt.getObject().isLiteral()){
                     doc.add(new Field("label",stmt.getString().toLowerCase(),Store.YES,Index.NOT_ANALYZED));
-                    
-                    //for debugging
-                    System.out.println("stmt:" + stmt.getString().toLowerCase());
+                    System.out.println("["+ i + "] TERM:" + stmt.getString().toLowerCase()+ " URI:" + uri);
+                    i++;
                 }
-            }
-            //for dubugging
-            System.out.println("Doc:" + doc.toString());
-            
+            }   
             writer.addDocument(doc);
         }
         writer.commit();
         writer.optimize();
         writer.close();
+        System.out.println("Overall "+i+" vocabularies added");
     }
     
-
     
     public List<Individual> getConcepts(Status status) {
     	String tweet = status.getText();
@@ -165,34 +157,8 @@ public class ConceptMap {
                 if (!labels.contains(label) 
                         && label.length() > 1 
                         && !stopwords.contains(label)) {
-//                	System.out.println("i @ ConceptMap: " + i.toString());
-                    result.add(i);
-//                    System.out.println("i.getLabel: "+i.getLabel(tweet));
-                	System.out.println("getConcepts@ConceptMap.java called + matched label exists");
-
-                    // Export model for debugging
-                	//for debugging
-//                	System.out.println("status:" + status.toString());
-//                    System.out.println("label:" + label.toString());
-//                    System.out.println("tweet:" + tweet);
-//                    System.out.println("time:" + status.getCreatedAt());
-//                    System.out.println("location: " + getGeocoord(status.toString()).toString() + "\n");
-                                       
-                    labels.add(label);
-                    
-//                    UpdateRequest request = UpdateFactory.create();
-                    
-//                    if(geoCoord.compareTo("null") < 0){
-//                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label.toString() + "> ;	dc:date \"" + status.getCreatedAt() + "\"^^xsd:dateTime . <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point;"+ geoCoord + "<http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.}" );
-//                    }
-//                    else{
-//                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label.toString() + "> ;	dc:date \"" + status.getCreatedAt() + "\"^^xsd:dateTime .}");
-//                    }
-                    
-//                    System.out.println("request: " + request.toString());	   
-//                    UpdateRemote.execute(request, "http://localhost:3030/ds/update");
-                    count++;
-                    
+                    result.add(i);                                       
+                    labels.add(label);                   
                 }
             }
         } catch (ParseException e) {
