@@ -19,6 +19,7 @@ public class Tweet {
     public List<Individual> termVector;
     public String text;
     public String location;
+    public List<String> labels;
     
     public List<String> lines = null;
     

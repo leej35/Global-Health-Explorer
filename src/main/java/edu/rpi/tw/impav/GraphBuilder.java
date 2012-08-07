@@ -81,11 +81,11 @@ public class GraphBuilder implements Runnable {
         for (Tweet t : tweets) {
         	
         	System.out.println("tweet@tweets in GraphBuilder: " + t);
-        	System.out.println("status @ GraphBuilder:" + t.text.toString());
-//            System.out.println("label:" + label.toString());
-//            System.out.println("tweet:" + tweet);
-//            System.out.println("time:" + status.getCreatedAt());
-//            System.out.println("location: " + getGeocoord(status.toString()).toString() + "\n");
+//        	System.out.println("status @ GraphBuilder:" + t.text.toString());
+//            System.out.println("label:" + t.labels.toString());
+//            System.out.println("tweet:" + t.text);
+//            System.out.println("time:" + t.created);
+//            System.out.println("location: " + t.location + "\n");
 
         	
         	

@@ -87,7 +87,9 @@ public class TweetQueue implements StatusListener {
     	List<Individual> individuals = concepts.getConcepts(status);
     	
     	if (individuals.size() > 0) {
-    		System.out.println("i.size() > 0");  		
+    		
+    		System.out.println("called?");
+    		
     		Tweet tweet = new Tweet();
     		tweet.termVector = individuals;
     		tweet.text = status.getText();
@@ -95,15 +97,16 @@ public class TweetQueue implements StatusListener {
     		tweet.creator = status.getUser();
     		tweet.location = getGeocoord(status.toString());
     		tweet.added = new Date();
-    		
+    		List<String> labels = null;
     		for(Individual i : individuals){
-    			System.out.println("label @ individual: " +i.getLabel(null));
-    			System.out.println("individual @individuals: " + i.toString());
+    			String label = i.getPropertyValue(concepts.getSkosPrefLabel()).asLiteral().getString();
+    			labels.add(label);
     		}
-//    		System.out.println("label(termVect) @ individual: "+ individuals.);
+    		System.out.println("labels @ TweetQueue: "+ labels.toString());
+    		tweet.labels = labels;
     		
     		tweets.add(tweet);
-        	}
+        }
     }	
     
     @Override

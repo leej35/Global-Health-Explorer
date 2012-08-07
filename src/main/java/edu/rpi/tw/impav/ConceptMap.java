@@ -39,6 +39,7 @@ import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.update.GraphStore;
 import com.hp.hpl.jena.update.GraphStoreFactory;
@@ -65,7 +66,7 @@ public class ConceptMap {
     private OntClass skosConcept;
     private DatatypeProperty skosPrefLabel;
 
-    private OntModel model;
+    public OntModel model;
     private RAMDirectory index;
 
     private IndexSearcher searcher;
@@ -144,7 +145,6 @@ public class ConceptMap {
     
 
     
-    
     public List<Individual> getConcepts(Status status) {
     	String tweet = status.getText();
     	
@@ -165,7 +165,7 @@ public class ConceptMap {
                 if (!labels.contains(label) 
                         && label.length() > 1 
                         && !stopwords.contains(label)) {
-                	System.out.println("i @ ConceptMap: " + i.toString());
+//                	System.out.println("i @ ConceptMap: " + i.toString());
                     result.add(i);
 //                    System.out.println("i.getLabel: "+i.getLabel(tweet));
                 	System.out.println("getConcepts@ConceptMap.java called + matched label exists");
@@ -180,7 +180,7 @@ public class ConceptMap {
                                        
                     labels.add(label);
                     
-                    UpdateRequest request = UpdateFactory.create();
+//                    UpdateRequest request = UpdateFactory.create();
                     
 //                    if(geoCoord.compareTo("null") < 0){
 //                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label.toString() + "> ;	dc:date \"" + status.getCreatedAt() + "\"^^xsd:dateTime . <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point;"+ geoCoord + "<http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.}" );
@@ -202,5 +202,9 @@ public class ConceptMap {
         
         return result;
     }
-    
+	
+    public Property getSkosPrefLabel(){
+    	return skosPrefLabel;
+    }
+
 }
