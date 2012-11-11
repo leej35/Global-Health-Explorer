@@ -86,21 +86,25 @@ public class GraphBuilder implements Runnable {
                         "prefix owl: <http://www.w3.org/2002/07/owl#>  \n"+
                         "prefix xsd: <http://www.w3.org/2001/XMLSchema#>  \n"+
                         "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  \n"+
-                        "INSERT DATA { GRAPH <#testgraph> {\n"+
-                        "  <http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + ">; \n"+
-                        "      prov:value \"" + t.text + "\"; \n"+
-                        "      rdfs:seeAlso <http://twitter.com/" + t.creator + "/status/" + t.id + ">; \n"+
-                        "      dc:date \"" + t.created + "\"^^xsd:dateTime . \n";
+                        "INSERT DATA { GRAPH <http://purl.org/twc/skitter/testgraph> {\n"+
+                        "  <http://purl.org/twc/skitter/"+ t.creator.getScreenName() + "/status/" + t.id +"> prov:value '''" + t.text + "'''; \n"+
+                        "      rdfs:seeAlso <http://twitter.com/" + t.creator.getScreenName() + "/status/" + t.id + ">; \n"+
+                        "      dc:date \"" + t.getCreated() + "\"^^xsd:dateTime . \n";
+                    for (Individual concept : t.termVector) {
+                        query += "  <http://purl.org/twc/skitter/"+ t.creator.getScreenName() + "/status/" + t.id +"> dc:subject <"+concept.getURI()+">. \n";
+                    }
                     if(t.location.compareTo("null") < 0){
-                        query = query + "  <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point; \n"+
-                            "      prov:value \"" + t.location + "\" .\n"+
-                            "  <http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.\n";
+                        query = query + "  <http://purl.org/twc/skitter/"+ t.creator.getScreenName() + "/status/" + t.id +"/location> a geo:Point; \n"+
+                            "     " + t.location + "\n"+
+                            "  <http://purl.org/twc/skitter/"+ t.creator.getScreenName() + "/status/" + t.id +"> prov:location <http://purl.org/twc/skitter/"+ t.creator.getScreenName() + "/status/" + t.id +">.\n";
                         //request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{ <http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + ">; prov:value \"" + t.text + "\"; rdfs:seeAlso <http://twitter.com/" + t.creator + "/status/" + t.id + ">; dc:date \"" + t.created + "\"^^xsd:dateTime . <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point;"+ t.location + "<http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.}" );
 
                     }else{
                         //request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{ <http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + ">; prov:value \"" + t.text + "\"; rdfs:seeAlso <http://twitter.com/" + t.creator + "/status/" + t.id + "> ; dc:date \"" + t.created + "\"^^xsd:dateTime .}");
                     }
                     query = query + "} }";
+                    System.out.println(query);
+
                     request.add(query);
                     
                     // But working with following -- without prov:value & rdfa:seeAlso 
@@ -111,12 +115,12 @@ public class GraphBuilder implements Runnable {
 //                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + "> ;	dc:date \"" + t.created + "\"^^xsd:dateTime .}");
 //                    }
 
-                    System.out.println(query);
                 }        
                 count++;
-                UpdateRemote.execute(request, "http://localhost:3030/ds/update"); //http://doppio.med.yale.edu:3030
+                UpdateRemote.execute(request, "http://localhost:3030/db/update"); //http://doppio.med.yale.edu:3030
             	
             } catch (Exception e){
+                System.out.println(e);
             }
         }
     }
