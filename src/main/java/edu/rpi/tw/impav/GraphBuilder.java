@@ -89,6 +89,7 @@ public class GraphBuilder implements Runnable {
                         "INSERT DATA { GRAPH <http://purl.org/twc/skitter/testgraph> {\n"+
                         "  <http://purl.org/twc/skitter/"+ t.creator.getScreenName() + "/status/" + t.id +"> prov:value '''" + t.text + "'''; \n"+
                         "      rdfs:seeAlso <http://twitter.com/" + t.creator.getScreenName() + "/status/" + t.id + ">; \n"+
+                        "      prov:wasAttributedTo <http://twitter.com/" + t.creator.getScreenName() + ">; \n"+
                         "      dc:date \"" + t.getCreated() + "\"^^xsd:dateTime . \n";
                     for (Individual concept : t.termVector) {
                         query += "  <http://purl.org/twc/skitter/"+ t.creator.getScreenName() + "/status/" + t.id +"> dc:subject <"+concept.getURI()+">. \n";
