@@ -92,6 +92,7 @@ public class TweetQueue implements StatusListener {
     		ArrayList<String> labels = new ArrayList<String>(); 		
     		Tweet tweet = new Tweet();
     		tweet.termVector = individuals;
+    		tweet.id = status.getId();
     		tweet.text = status.getText();
     		tweet.created = status.getCreatedAt();
     		tweet.creator = status.getUser();

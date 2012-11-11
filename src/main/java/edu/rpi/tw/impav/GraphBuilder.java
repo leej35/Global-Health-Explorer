@@ -73,15 +73,30 @@ public class GraphBuilder implements Runnable {
             try {
                 
                 for(String label:t.labels){
+                	
+                	//To Jim: NOT working with following CODE (do not UPDATE to Endpoint) : with prov:value and rdfa:seeAlso
+                	//Also, GRAPH doesn't work with me. Can you fix it if you can?
+                	
                     if(t.location.compareTo("null") < 0){
-                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + "> ;	dc:date \"" + t.created + "\"^^xsd:dateTime . <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point;"+ t.location + "<http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.}" );
+                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{ <http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + ">; prov:value \"" + t.text + "\"; rdfs:seeAlso <http://twitter.com/" + t.creator + "/status/" + t.id + ">; dc:date \"" + t.created + "\"^^xsd:dateTime . <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point;"+ t.location + "<http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.}" );
 
                     }else{
-                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + "> ;	dc:date \"" + t.created + "\"^^xsd:dateTime .}");
+                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{ <http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + ">; prov:value \"" + t.text + "\"; rdfs:seeAlso <http://twitter.com/" + t.creator + "/status/" + t.id + "> ; dc:date \"" + t.created + "\"^^xsd:dateTime .}");
                     }
+                    
+                    
+                    // But working with following -- without prov:value & rdfa:seeAlso 
+//                    if(t.location.compareTo("null") < 0){
+//                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + "> ;	dc:date \"" + t.created + "\"^^xsd:dateTime . <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point;"+ t.location + "<http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.}" );
+//
+//                    }else{
+//                        request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + "> ;	dc:date \"" + t.created + "\"^^xsd:dateTime .}");
+//                    }
+
+                    
                 }        
                 count++;
-                UpdateRemote.execute(request, "http://localhost:3030/ds/update");
+                UpdateRemote.execute(request, "http://localhost:3030/ds/update"); //http://doppio.med.yale.edu:3030
             	
             } catch (Exception e){
             }

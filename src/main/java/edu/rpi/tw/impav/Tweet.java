@@ -17,6 +17,7 @@ public class Tweet {
     public Date created;
     public Date added;
     public List<Individual> termVector;
+    public long id;
     public String text;
     public String location;
     public String originalText;

@@ -151,17 +151,18 @@ public class ConceptMap {
     	Translate.setClientId("leej35");
         Translate.setClientSecret("IydKdGG7l0b3dH7kth0m5Af5DtpfQXf2Bp+v3GkAjqU=");
 
-        // 36 languages.. 
-        termList.add(Translate.execute(term, Language.ENGLISH, Language.ARABIC));
-        termList.add(Translate.execute(term, Language.ENGLISH, Language.BULGARIAN));
-        termList.add(Translate.execute(term, Language.ENGLISH, Language.CHINESE_SIMPLIFIED));
-        termList.add(Translate.execute(term, Language.ENGLISH, Language.CHINESE_TRADITIONAL));
-        termList.add(Translate.execute(term, Language.ENGLISH, Language.CZECH));
+        // 36 languages..
+        termList.add(term);
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.ARABIC));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.BULGARIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.CHINESE_SIMPLIFIED));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.CHINESE_TRADITIONAL));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.CZECH));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.DANISH));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.DUTCH));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.ESTONIAN));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.FINNISH));
-//        termList.add(Translate.execute(term, Language.ENGLISH, Language.FRENCH));
+        termList.add(Translate.execute(term, Language.ENGLISH, Language.FRENCH));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.GERMAN));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.GREEK));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.HAITIAN_CREOLE));
@@ -182,7 +183,7 @@ public class ConceptMap {
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.RUSSIAN));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.SLOVAK));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.SLOVENIAN));
-//        termList.add(Translate.execute(term, Language.ENGLISH, Language.SPANISH));
+        termList.add(Translate.execute(term, Language.ENGLISH, Language.SPANISH));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.SWEDISH));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.THAI));
 //        termList.add(Translate.execute(term, Language.ENGLISH, Language.TURKISH));
