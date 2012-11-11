@@ -3,6 +3,7 @@ package edu.rpi.tw.impav;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -54,6 +55,8 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
+import com.memetix.mst.language.Language;
+import com.memetix.mst.translate.Translate;
 
 import java.io.*;
 
@@ -77,8 +80,7 @@ public class ConceptMap {
     
     GraphStore graphStore = GraphStoreFactory.create() ;
 
-    public ConceptMap(String fileOrURI) throws CorruptIndexException,
-            LockObtainFailedException, IOException {
+    public ConceptMap(String fileOrURI) throws Exception {
         model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         FileManager.get().readModel(model, fileOrURI);
         model.loadImports();     
@@ -86,7 +88,6 @@ public class ConceptMap {
         
         skosPrefLabel = model.createDatatypeProperty(SKOS + "prefLabel");
         
-        System.out.println(skosPrefLabel.toString());
         index = new RAMDirectory();
         loadConcepts();
         searcher = new IndexSearcher(index);
@@ -112,8 +113,7 @@ public class ConceptMap {
         return result;
     }
 
-    private void loadConcepts() throws CorruptIndexException,
-            LockObtainFailedException, IOException {
+    private void loadConcepts() throws Exception {
         IndexWriter writer = new IndexWriter(index, new StandardAnalyzer(Version.LUCENE_30), MaxFieldLength.LIMITED);
         int i=0;
         for (Individual concept : (List<Individual>)skosConcept.listInstances().toList()) {
@@ -123,9 +123,17 @@ public class ConceptMap {
             doc.add(new Field("uri", uri, Store.YES, Index.NOT_ANALYZED_NO_NORMS));
             for (Statement stmt : (List<Statement>)concept.listProperties(skosPrefLabel).toList()) {
                 if (stmt.getObject().isLiteral()){
+                	
                     doc.add(new Field("label",stmt.getString().toLowerCase(),Store.YES,Index.NOT_ANALYZED));
-                    System.out.println("["+ i + "] TERM:" + stmt.getString().toLowerCase()+ " URI:" + uri);
                     i++;
+                	// translated word might be added here.
+                    ArrayList<String> otherLangs = new ArrayList<String>();
+                    otherLangs = translateTerm(stmt.getString().toLowerCase());
+                    for(String label:otherLangs){
+                        doc.add(new Field("labelOtherLang",label.toLowerCase(),Store.YES,Index.NOT_ANALYZED));
+                        System.out.println("["+ i + "] TERM: " +stmt.getString().toLowerCase() + " Translated: " + label.toLowerCase()+ " URI:" + uri);
+                        i++;
+                    }
                 }
             }   
             writer.addDocument(doc);
@@ -136,10 +144,56 @@ public class ConceptMap {
         System.out.println("Overall "+i+" vocabularies added");
     }
     
+    private ArrayList<String> translateTerm (String term) throws Exception{
+    	ArrayList<String> termList = new ArrayList<String>();
+
+    	// Microsoft Translator API: https://github.com/boatmeme/microsoft-translator-java-api
+    	Translate.setClientId("leej35");
+        Translate.setClientSecret("IydKdGG7l0b3dH7kth0m5Af5DtpfQXf2Bp+v3GkAjqU=");
+
+        // 36 languages.. 
+        termList.add(Translate.execute(term, Language.ENGLISH, Language.ARABIC));
+        termList.add(Translate.execute(term, Language.ENGLISH, Language.BULGARIAN));
+        termList.add(Translate.execute(term, Language.ENGLISH, Language.CHINESE_SIMPLIFIED));
+        termList.add(Translate.execute(term, Language.ENGLISH, Language.CHINESE_TRADITIONAL));
+        termList.add(Translate.execute(term, Language.ENGLISH, Language.CZECH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.DANISH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.DUTCH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.ESTONIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.FINNISH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.FRENCH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.GERMAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.GREEK));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.HAITIAN_CREOLE));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.HEBREW));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.KOREAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.HINDI));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.HMONG_DAW));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.HUNGARIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.INDONESIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.ITALIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.JAPANESE));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.LATVIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.LITHUANIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.NORWEGIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.POLISH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.PORTUGUESE));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.ROMANIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.RUSSIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.SLOVAK));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.SLOVENIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.SPANISH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.SWEDISH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.THAI));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.TURKISH));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.UKRAINIAN));
+//        termList.add(Translate.execute(term, Language.ENGLISH, Language.VIETNAMESE));
+   	
+    	return termList;
+    }
     
     public List<Individual> getConcepts(Status status) {
     	String tweet = status.getText();
-    	
     	
         List<Individual> result = new LinkedList<Individual>();
         try {
@@ -151,15 +205,15 @@ public class ConceptMap {
             for (ScoreDoc scoreDoc : results.scoreDocs) {
                 Document doc = searcher.doc(scoreDoc.doc);
                 Individual i = model.getIndividual(doc.get("uri"));
-                               
                 String label = doc.get("label");
-
+                
                 if (!labels.contains(label) 
                         && label.length() > 1 
                         && !stopwords.contains(label)) {
                     result.add(i);                                       
                     labels.add(label);                   
                 }
+
             }
         } catch (ParseException e) {
         } catch (Exception e) {

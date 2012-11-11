@@ -37,7 +37,7 @@ public class TweetQueue implements StatusListener {
 
     private BlockingQueue<Tweet> tweets = new LinkedBlockingQueue<Tweet>();
     
-    public TweetQueue(String fileOrURI) throws CorruptIndexException, LockObtainFailedException, IOException, TwitterException, BackingStoreException {
+    public TweetQueue(String fileOrURI) throws Exception {
         System.out.println("Loading Concepts...");
         concepts = new ConceptMap(fileOrURI);
         System.out.println("Done.");
@@ -66,15 +66,15 @@ public class TweetQueue implements StatusListener {
     	if(latAt == -1){
     		return "null";
     	} 
-    	latAt = latAt+10;
+    	latAt = latAt+9;
     	int latEnd = status.indexOf(",",latAt);
     	int lonAt = status.indexOf("longitude") + 10;
     	int lonEnd = status.indexOf("}", lonAt);
     	String latitude = status.substring(latAt, latEnd);
     	String longitude = status.substring(lonAt, lonEnd);
 		return "geo:lat \"" + latitude + "\"^^xsd:double; \n geo:long \"" + longitude +"\"^^xsd:double .";
-    
     }
+    
     @Override
     public void onDeletionNotice(StatusDeletionNotice arg0) {
     }

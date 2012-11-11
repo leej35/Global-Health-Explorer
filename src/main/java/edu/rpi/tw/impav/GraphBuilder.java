@@ -66,8 +66,8 @@ public class GraphBuilder implements Runnable {
             System.out.println("label:" + t.labels.toString());
             System.out.println("tweet:" + t.text);
             System.out.println("time:" + t.created);
-            System.out.println("location: " + t.location);           
-            System.out.println("origianl: " + t.originalText + "\n");
+            System.out.println("location: " + t.location + "\n");           
+//            System.out.println("origianl: " + t.originalText + "\n");
             
             UpdateRequest request = UpdateFactory.create();
             try {
@@ -75,6 +75,7 @@ public class GraphBuilder implements Runnable {
                 for(String label:t.labels){
                     if(t.location.compareTo("null") < 0){
                         request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + "> ;	dc:date \"" + t.created + "\"^^xsd:dateTime . <http://purl.org/twc/skitter/tweet/" + count + "/location> a geo:Point;"+ t.location + "<http://purl.org/twc/skitter/tweet/" + count + "> prov:location <http://purl.org/twc/skitter/tweet/" + count + "/location>.}" );
+
                     }else{
                         request.add("prefix dc: <http://purl.org/dc/terms/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> prefix prov: <http://www.w3.org/ns/prov#> prefix ogc: <http://www.opengis.net/rdf#> prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> prefix foaf: <http://xmlns.com/foaf/0.1/> prefix owl: <http://www.w3.org/2002/07/owl#> prefix xsd: <http://www.w3.org/2001/XMLSchema#> prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> INSERT DATA{<http://purl.org/twc/skitter/tweet/"+ count +"> dc:subject <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#" + label + "> ;	dc:date \"" + t.created + "\"^^xsd:dateTime .}");
                     }
