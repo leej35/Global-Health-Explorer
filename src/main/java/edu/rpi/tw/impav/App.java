@@ -22,7 +22,7 @@ public class App  {
     private Thread thread;
     public static boolean fullscreen = false;
     
-    public App(String urlo) throws Exception {
+    public App() throws Exception {
         
 //    	//test query for scalability upto full NCI Thesaurus 
 //    	String queryText = 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
@@ -90,7 +90,7 @@ public class App  {
 
     public static void main(String[] args) {
             try {
-                App app = new App(args[0]);
+                App app = new App();
             } catch (Exception e) {
                 e.printStackTrace();
             }
