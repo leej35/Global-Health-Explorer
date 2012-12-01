@@ -118,7 +118,7 @@ public class GraphBuilder implements Runnable {
 
                 }        
                 count++;
-                UpdateRemote.execute(request, "http://203.252.118.124:3030/db/update"); //http://doppio.med.yale.edu:3030
+                UpdateRemote.execute(request, "http://203.252.118.124:3030/ds/update"); //http://doppio.med.yale.edu:3030
             	
             } catch (Exception e){
                 System.out.println(e);
