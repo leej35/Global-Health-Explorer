@@ -90,7 +90,7 @@ public class App  {
 
     public static void main(String[] args) {
             try {
-                App app = new App(args[0]);
+                App app = new App();
             } catch (Exception e) {
                 e.printStackTrace();
             }
