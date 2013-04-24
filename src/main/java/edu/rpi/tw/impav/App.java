@@ -22,7 +22,7 @@ public class App  {
     private Thread thread;
     public static boolean fullscreen = false;
     
-    public App(String urlo) throws Exception {
+    public App(String url) throws Exception {
         
 //    	//test query for scalability upto full NCI Thesaurus 
 //    	String queryText = 	"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
@@ -79,7 +79,7 @@ public class App  {
 			     URLEncoder.encode(queryText, "UTF-8"), 
 			     apikey);
 		
-		String url = sparqlService + "?" + httpQueryString;
+		//String url = sparqlService + "?" + httpQueryString;
 
     	TweetQueue queue = new TweetQueue(url);
         queue.start(); 

@@ -86,7 +86,7 @@ public class GraphBuilder implements Runnable {
                         "prefix owl: <http://www.w3.org/2002/07/owl#>  \n"+
                         "prefix xsd: <http://www.w3.org/2001/XMLSchema#>  \n"+
                         "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  \n"+
-                        "INSERT DATA { GRAPH <http://purl.org/twc/skitter/testgraph> {\n"+
+                        "INSERT DATA { GRAPH <http://purl.org/twc/skitter/ncit> {\n"+
                         "  <http://purl.org/twc/skitter/"+ t.creator.getScreenName() + "/status/" + t.id +"> prov:value '''" + t.text + "'''; \n"+
                         "      rdfs:seeAlso <http://twitter.com/" + t.creator.getScreenName() + "/status/" + t.id + ">; \n"+
                         "      prov:wasAttributedTo <http://twitter.com/" + t.creator.getScreenName() + ">; \n"+
@@ -118,7 +118,7 @@ public class GraphBuilder implements Runnable {
 
                 }        
                 count++;
-                UpdateRemote.execute(request, "http://localhost:3030/db/update"); //http://doppio.med.yale.edu:3030
+                UpdateRemote.execute(request, "http://doppio.med.yale.edu:3030/db/update"); //http://doppio.med.yale.edu:3030
             	
             } catch (Exception e){
                 System.out.println(e);
