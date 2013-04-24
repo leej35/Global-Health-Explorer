@@ -18,24 +18,27 @@ import org.apache.lucene.store.LockObtainFailedException;
 
 import twitter4j.Status;
 import twitter4j.StatusDeletionNotice;
-import twitter4j.StatusListener;
+import twitter4j.StatusAdapter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
+import twitter4j.FilterQuery;
 //import twitter4j.http.AccessToken;
 //import twitter4j.http.RequestToken;
 
 import com.hp.hpl.jena.ontology.Individual;
 
-public class TweetQueue implements StatusListener {
+public class TweetQueue extends StatusAdapter {
 
     private ConceptMap concepts = null;
        
     private TwitterStream twitter = new TwitterStreamFactory().getInstance();
 
     private BlockingQueue<Tweet> tweets = new LinkedBlockingQueue<Tweet>();
+
+    private String[] keywords = null;
     
     public TweetQueue(String fileOrURI) throws Exception {
         System.out.println("Loading Concepts...");
@@ -44,12 +47,24 @@ public class TweetQueue implements StatusListener {
     	twitter.addListener(this);
     }
 
+    public TweetQueue(String[] keywords) throws Exception {
+    	twitter.addListener(this);
+        this.keywords = keywords;
+    }
+
     public BlockingQueue<Tweet> getTweets() {
         return tweets;
     }
 
     public void start() throws IOException, TwitterException {
-        twitter.sample();
+        if (keywords != null) {
+            FilterQuery q = new FilterQuery();
+            //q.count(100);
+            q.track(keywords);
+            twitter.filter(q);
+        } else {
+            twitter.sample();
+        }
     }
     
     
@@ -72,7 +87,7 @@ public class TweetQueue implements StatusListener {
     	int lonEnd = status.indexOf("}", lonAt);
     	String latitude = status.substring(latAt, latEnd);
     	String longitude = status.substring(lonAt, lonEnd);
-		return "geo:lat \"" + latitude + "\"^^xsd:double; \n geo:long \"" + longitude +"\"^^xsd:double .";
+        return "geo:lat \"" + latitude + "\"^^xsd:double; \n geo:long \"" + longitude +"\"^^xsd:double .";
     }
     
     @Override
@@ -86,11 +101,14 @@ public class TweetQueue implements StatusListener {
 
     @Override
     public void onStatus(Status status) {
-    	List<Individual> individuals = concepts.getConcepts(status);
+        List<Individual> individuals = null;
+        if (concepts != null)
+            individuals = concepts.getConcepts(status);
     	
-    	if (individuals.size() > 0) {
+    	if (concepts == null || individuals.size() > 0) {
     		ArrayList<String> labels = new ArrayList<String>(); 		
     		Tweet tweet = new Tweet();
+                tweet.status = status;
     		tweet.termVector = individuals;
     		tweet.id = status.getId();
     		tweet.text = status.getText();
@@ -99,11 +117,13 @@ public class TweetQueue implements StatusListener {
     		tweet.location = getGeocoord(status.toString());
     		tweet.added = new Date();
     		tweet.originalText = status.toString();
-    		for(Individual i : individuals){
+                if (individuals != null) {
+                    for(Individual i : individuals){
     			String label = i.getPropertyValue(concepts.getSkosPrefLabel()).asLiteral().getString();
     			labels.add(label);
-    		}
-    		tweet.labels = labels;    		
+                    }
+                    tweet.labels = labels;    		
+                }
     		tweets.add(tweet);
         }
     }	

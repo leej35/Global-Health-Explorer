@@ -13,6 +13,9 @@ import twitter4j.User;
 
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.rdf.model.Literal;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import twitter4j.Status;
 
 public class Tweet {
     public User creator;
@@ -24,11 +27,13 @@ public class Tweet {
     public String location;
     public String originalText;
     public List<String> labels;
+    public Status status;
 
     public String getCreated() {
         Calendar c = Calendar.getInstance();
         c.setTime(created);
-        Literal l = termVector.get(0).getModel().createTypedLiteral(c);  
+        Model model = ModelFactory.createDefaultModel();
+        Literal l = model.createTypedLiteral(c);  
         return l.getLexicalForm();
     }
         
